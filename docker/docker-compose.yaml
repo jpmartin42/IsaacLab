@@ -64,6 +64,10 @@ x-default-isaac-lab-volumes: &default-isaac-lab-volumes
   - type: bind
     source: .isaac-lab-docker-history
     target: ${DOCKER_USER_HOME}/.bash_history
+    # A custom docker image to the wheel-on-limb dev directory
+  - type: bind
+    source: ${HOST_WL_DIR}
+    target: ${DOCKER_ISAACLAB_PATH}/../wheel_limb_robotics/
 
 x-default-isaac-lab-environment: &default-isaac-lab-environment
   - ISAACSIM_PATH=${DOCKER_ISAACLAB_PATH}/_isaac_sim

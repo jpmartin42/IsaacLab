@@ -42,6 +42,8 @@ RUN --mount=type=cache,target=/var/cache/apt \
     build-essential \
     cmake \
     git \
+    vim \
+    tmux \
     libglib2.0-0 \
     ncurses-term \
     wget && \
